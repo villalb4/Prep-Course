@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.info {
+    margin: 50px 0 50px 0;
+}
+.xp {
+    margin: 30px 0;
+}
+.list {
+    text-align: start;
+}
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.hobbies {
+    margin: 30px 0;
+}
+.desciption {
+}
+.text {
+    max-width: 700px;
+}
