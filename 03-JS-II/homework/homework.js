@@ -5,10 +5,17 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x > y) {
-    return x;
-  }
-  return y;
+ if (x > y) {
+   return x;
+ }
+ else if (y > x) {
+   return y;
+ }
+ else {
+   return x;
+ }
+   
+
 }
 
 function mayoriaDeEdad(edad) {
@@ -34,7 +41,7 @@ function conection(status) {
     return "Away";
   }
   else {
-    return "Offline";
+    return "Offline"
   }
 }
 
@@ -68,21 +75,22 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch (color) {
-    case 'blue':
+    case "blue":
       return "This is blue";
       break;
-    case 'red':
+    case "red":
       return "This is red";
       break;
-    case 'green':
+    case "green":
       return "This is green";
       break;
-    case 'orange':
+    case "orange":
       return "This is orange";
       break;
     default:
       return "Color not found";
-  }
+      break;
+ }
 }
 
 function esDiezOCinco(numero) {
@@ -113,7 +121,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (Math.round(numero) === numero) {
+  if (numero % 1 === 0) {
     return true;
   }
   return false;
@@ -134,7 +142,7 @@ function fizzBuzz(numero) {
     return "buzz";
   }
   else {
-    return numero;
+    return numero 
   }
 }
 
@@ -145,17 +153,19 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  if (num1 === 0 || num2 === 0 || num3 === 0) {
-    return "Error";
-  }
-  else if (num1 < 0 || num2 < 0 || num3 < 0) {
+  if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos";
   }
-  else if (num3 > num1 && num3 > num2) {
-    return num3 + 1;
+  else if (num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
   }
-  else if (num1 > num2 && num1 > num3 && num1 > 0) {
+  else if (num1 > 0 && num1 > num2 && num1 > num3) {
     return "Número 1 es mayor y positivo";
+  }
+  
+  else if (num3 > num1 && num3 > num2) {
+    num3 = num3 + 1
+    return num3;
   }
   else {
     return false;
@@ -168,10 +178,10 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero === 0 || numero === 1) {
+  if (numero < 2) {
     return false;
   }
-  for (i = 2; i < numero; i++) {
+  for (var i = 2 ; i < numero ; i++) {
     if (numero % i === 0) {
       return false;
     }
@@ -184,47 +194,42 @@ function esVerdadero(valor){
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if (valor === true) {
-    return "Soy verdadero"
+    return "Soy verdadero";
   }
-  else if (valor === false) {
-    return "Soy falso"
-  }
+  return "Soy falso";
 }
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
-  var tablaSeis = []
-  for (i = 0; i <= 10; i++) {
-    tablaSeis.push(i * 6)
+  var array = [];
+  for (var i = 0 ; i <= 10 ; i++) {
+    array.push(i * 6);
   }
-  return tablaSeis
+  return array;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  var toString= numero.toString()
-  if (toString.length === 3) {
-    return true;
-  }
-  return false;
+if (numero > 99 && numero < 1000) {
+  return true
+}
+return false;
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var num = 1;
-  var suma = numero;
+  var x = 0;
   do {
-    suma = suma + 5;
-    num ++
-  } while (num < 9);
-  return suma;
+    numero = numero + 5;
+    x = x + 1;
+  } while (x < 8);
+  return numero;
 }
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
