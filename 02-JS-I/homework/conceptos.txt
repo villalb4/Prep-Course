@@ -7,3 +7,16 @@
  * Valores booleanos (`true`, `false`)
  
 VARIABLES:
+Una variable es un espacio en la memoria para guardar un valor.
+
+STRING:
+Un string es cualquier cosas escrita entre comillas simples o dobles.
+
+FUNCIONES:
+Una funcion es un conjunto de instrucciones al que podemos llamar las veces que querramos para no estar repitiendo el mismo codigo una y otra vez. A estas funciones le pasamos valores llamados "Argumentos". Para llamar a un funcion es necesario agregar la instruccion "Return" que devuelve el valor de la funcion a la que llamemos, si queremos llamar a una funcion sin return, se mostrara "Undefined" en la consola.
+
+IF:
+La declaracion "If" evalua si un bloque de codigo es verdadero, si es verdadero devuelve "true" y ejequta el codigo, de lo contrario devuelte "false" e ignora el bloque de codigo.
+
+BOOLEANOS:
+Hay unos cuantos valores de booleanos, pero los que mas usaremos son: true y false, si por ejemplo tenemos un if preguntando si 5 es mayor que 4, este retornara true. tambien estan los valores "Nan", "Null" y "Undefined" (existen algunos mas pero estos son los que mas veremos al programar).
